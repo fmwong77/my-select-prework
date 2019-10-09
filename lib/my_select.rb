@@ -1,4 +1,4 @@
-def my_select(collection)
+def my_select(collection, selected)
   i = 0
   while i < collection.size do
     yield(collection[i]) if block_given?
@@ -6,7 +6,10 @@ def my_select(collection)
   end
 end
 
-collection = []
-my_select(collection) {|element|
-  if 
+collection = [1,2,3]
+selected = 3
+my_select(collection, selected) {|element|
+  if element == selected
+    collection
+  end
 }
