@@ -1,8 +1,11 @@
-def my_select(collection, selected)
+def my_select(collection)
   if block_given?
     i = 0
+    array = []
     while i < collection.size do
-      yield(collection[i]) if block_given?
+      if yield(collection[i]) != nil
+        array << collection[i]
+      end
       i += 1
     end
   end 
