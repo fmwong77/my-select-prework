@@ -8,8 +8,6 @@ end
 
 collection = [1,2,3]
 selected = 3
-my_select(collection, selected) {|element|
-  if element == selected
-    collection
-  end
+my_select(collection) {|element|
+  element.even?
 }
