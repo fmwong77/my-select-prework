@@ -3,7 +3,8 @@ def my_select(collection)
     i = 0
     array = []
     while i < collection.size do
-      if yield(collection[i]) != nil
+      n = yield(collection[i]) 
+      puts n
         array << collection[i]
       end
       i += 1
