@@ -8,4 +8,5 @@ end
 
 collection = []
 my_select(collection) {|element|
+  if 
 }
